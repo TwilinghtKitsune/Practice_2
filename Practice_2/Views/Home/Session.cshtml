@@ -1,0 +1,18 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Session</title>
+
+</head>
+<body>
+    <label>@($"Добро пожаловать, пользователь с логином {Session["login"].ToString()} и паролем {Session["password"].ToString()}")</label>
+</body>
+</html>
+

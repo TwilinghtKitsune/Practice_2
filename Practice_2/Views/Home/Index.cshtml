@@ -1,0 +1,30 @@
+﻿@model Practice_2.Models.TextBoxes
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @ViewBag.Wrong
+        </div>
+        @Html.ValidationSummary()
+        <p>Логин: @Html.TextBoxFor(x => x.Login)</p>
+        <p>Пароль: @Html.TextBoxFor(x => x.Password_1)</p>
+        <p>Повторите пароль: @Html.TextBoxFor(x => x.Password_2)</p>
+        <p>Ваша почта: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Возраст: @Html.TextBoxFor(x => x.Age)<br>(От 18 до 65)</p>
+        <input type="submit" value="Отправить" />
+    }
+</body>
+</html>
+
